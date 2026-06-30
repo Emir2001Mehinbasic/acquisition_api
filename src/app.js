@@ -1,12 +1,9 @@
-import express from "express";
+import express from 'express';
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+app.get('/', (req, res) => {
+  res.status(200).send('Aaaaaa');
+});
 
-app.get('/',(req,res)=>{
-    res.status(200).send("Aaaaaa")
-})
-
-
-export default app
+export default app;
