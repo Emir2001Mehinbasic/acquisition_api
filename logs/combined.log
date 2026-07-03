@@ -1,0 +1,4 @@
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [03/Jul/2026:21:40:12 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [03/Jul/2026:21:40:15 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
