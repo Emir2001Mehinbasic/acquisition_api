@@ -1,10 +1,13 @@
 import express from 'express';
 import logger from './config/logger.js';
+import helmet from 'helmet';
 
 const app = express();
 
+app.use(helmet())
+
 app.get('/', (req, res) => {
-    logger:
+    logger.info("Hello From acqusition")
   res.status(200).send('Aaaaaa');
 });
 
