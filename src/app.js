@@ -4,8 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import router from './routes/auth.routes.js';
-import { time } from 'drizzle-orm/mysql-core';
+import authRoutes from './routes/auth.routes.js';
 
 const app = express();
 

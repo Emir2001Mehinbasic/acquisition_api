@@ -1,6 +1,6 @@
 import express from 'express';
 
-const router = express(router);
+const router = express.Router();
 
 router.post('/sign-up', (req, res) => {
   res.send('POST /api/auth/sign-up response');
