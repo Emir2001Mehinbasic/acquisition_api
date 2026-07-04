@@ -7,3 +7,4 @@
 {"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [04/Jul/2026:21:37:33 +0000] \"GET / HTTP/1.1\" 200 6 \"-\" \"PostmanRuntime/7.50.0\"","service":"acquisition_api"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [04/Jul/2026:21:38:19 +0000] \"GET /api HTTP/1.1\" 404 142 \"-\" \"PostmanRuntime/7.50.0\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [04/Jul/2026:21:41:03 +0000] \"GET /api HTTP/1.1\" 404 142 \"-\" \"PostmanRuntime/7.50.0\"","service":"acquisition_api"}
