@@ -13,7 +13,7 @@ export const hashPassword = async password => {
   }
 };
 
-export const createUser = async (name, email, password, role = 'user') => {
+export const createUser = async ({ name, email, password, role = 'user' }) => {
   try {
     const existingUser = await db
       .select()
@@ -42,6 +42,11 @@ export const createUser = async (name, email, password, role = 'user') => {
   } catch (e) {
     logger.error(`Error creating user: ${e.message}`);
     console.error('STVARNA GREŠKA IZ BAZE:', e);
+
+    if (e.message === 'User with this email already exists') {
+      throw e;
+    }
+
     throw new Error('Error creating user');
   }
 };

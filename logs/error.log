@@ -14,3 +14,15 @@
 {"level":"error","message":"Error hashing password: data and salt arguments required","service":"acquisition_api"}
 {"level":"error","message":"Error creating user: Error hashing password","service":"acquisition_api"}
 {"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: jwttoken is not a function","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: cookies.setCookie is not a function","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
