@@ -104,3 +104,12 @@
 {"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
 {"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
 {"level":"info","message":"::1 - - [07/Jul/2026:22:12:26 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 493 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: User with this email already exists","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:22:14:19 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 409 47 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"User created: an33dca_neko@gmail.com","service":"acquisition_api"}
+{"level":"info","message":"User with email : an33dca_neko@gmail.com signed up successfully","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:22:14:26 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 117 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"User created: an3233a_neko@gmail.com","service":"acquisition_api"}
+{"level":"info","message":"User with email : an3233a_neko@gmail.com signed up successfully","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:22:17:35 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 118 \"-\" \"HTTPie\"","service":"acquisition_api"}

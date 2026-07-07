@@ -26,3 +26,5 @@
 {"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
 {"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
 {"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: User with this email already exists","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: User with this email already exists","service":"acquisition_api"}

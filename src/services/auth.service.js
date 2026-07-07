@@ -9,7 +9,16 @@ export const hashPassword = async password => {
     return await bcrypt.hash(password, 10);
   } catch (e) {
     logger.error(`Error hashing password: ${e.message}`);
-    throw new Error('Error hashing password');
+    throw new Error('Error hashing password', { cause: e });
+  }
+};
+
+export const comparePassword = async (password, hashedPassword) => {
+  try {
+    return await bcrypt.compare(password, hashedPassword);
+  } catch (e) {
+    logger.error(`Error comparing password: ${e.message}`);
+    throw new Error('Error comparing password', { cause: e });
   }
 };
 
@@ -47,6 +56,39 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
       throw e;
     }
 
-    throw new Error('Error creating user');
+    throw new Error('Error creating user', { cause: e });
+  }
+};
+
+export const authenticateUser = async ({ email, password }) => {
+  try {
+    const existingUser = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, email))
+      .limit(1);
+
+    if (existingUser.length === 0) {
+      throw new Error('User not found');
+    }
+
+    const user = existingUser[0];
+    const isPasswordValid = await comparePassword(password, user.password);
+
+    if (!isPasswordValid) {
+      throw new Error('Invalid password');
+    }
+
+    const safeUser = { ...user };
+    delete safeUser.password;
+    return safeUser;
+  } catch (e) {
+    logger.error(`Error authenticating user: ${e.message}`);
+
+    if (e.message === 'User not found' || e.message === 'Invalid password') {
+      throw e;
+    }
+
+    throw new Error('Error authenticating user', { cause: e });
   }
 };
