@@ -1,0 +1,16 @@
+{"level":"error","message":"Error in signUp controller: Cannot access 'user' before initialization","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Cannot access 'user' before initialization","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Cannot access 'user' before initialization","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Cannot access 'name' before initialization","service":"acquisition_api"}
+{"level":"error","message":"Error hashing password: data and salt arguments required","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: Error hashing password","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error hashing password: data and salt arguments required","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: Error hashing password","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: error is not defined","service":"acquisition_api"}
+{"level":"error","message":"Error hashing password: data and salt arguments required","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: Error hashing password","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}
+{"level":"error","message":"Error hashing password: data and salt arguments required","service":"acquisition_api"}
+{"level":"error","message":"Error creating user: Error hashing password","service":"acquisition_api"}
+{"level":"error","message":"Error in signUp controller: Error creating user","service":"acquisition_api"}

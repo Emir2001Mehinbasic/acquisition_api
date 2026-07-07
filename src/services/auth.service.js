@@ -41,6 +41,7 @@ export const createUser = async (name, email, password, role = 'user') => {
     return newUser;
   } catch (e) {
     logger.error(`Error creating user: ${e.message}`);
+    console.error('STVARNA GREŠKA IZ BAZE:', e);
     throw new Error('Error creating user');
   }
 };

@@ -1,7 +1,5 @@
-import { clear } from "winston";
-
-export const cookies ={
-  getOptions: ()=>({
+export const cookies = {
+  getOptions: () => ({
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
@@ -10,12 +8,12 @@ export const cookies ={
   set: (res, name, value, options = {}) => {
     const cookieOptions = { ...cookies.getOptions(), ...options };
     res.cookie(name, value, cookieOptions);
-},
+  },
   clear: (res, name, options = {}) => {
     const cookieOptions = { ...cookies.getOptions(), ...options, maxAge: 0 };
     res.cookie(name, '', cookieOptions);
   },
   get: (req, name) => {
     return req.cookies[name];
-  }
-}
+  },
+};
