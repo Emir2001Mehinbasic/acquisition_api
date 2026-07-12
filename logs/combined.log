@@ -113,3 +113,11 @@
 {"level":"info","message":"User created: an3233a_neko@gmail.com","service":"acquisition_api"}
 {"level":"info","message":"User with email : an3233a_neko@gmail.com signed up successfully","service":"acquisition_api"}
 {"level":"info","message":"::1 - - [07/Jul/2026:22:17:35 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 118 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"User created: nedim@gmail.com","service":"acquisition_api"}
+{"level":"info","message":"User with email : nedim@gmail.com signed up successfully","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:23:04:27 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 112 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:23:06:39 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 1148 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"User with email : nedim@gmail.com signed in successfully","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:23:06:49 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 112 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"User signed out successfully","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [07/Jul/2026:23:07:22 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisition_api"}
