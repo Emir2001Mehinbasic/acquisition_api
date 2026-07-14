@@ -23,17 +23,17 @@ const securityMiddleware = async (req, res, next) => {
         message = 'Access limit reached';
         break;
     }
-
-    const client = aj.withRule('slidingWindow', {
-      mode: 'LIVE',
-      interval: 60,
-      max: limit,
-      name: `${role}-rate-limit`,
-    });
+      const client = aj.withRule(
+        slidingWindow({
+        mode: 'LIVE',
+        interval: 60,
+        max: limit,
+  })
+);
 
     const decision = await client.protect(req);
 
-    if (decision.isDenied && decision.reason.isBot()) {
+    if (decision.isDenied() && decision.reason.isBot()) {
       logger.warn('Bot detected and blocked', {
         ip: req.ip,
         userAgent: req.get('User-Agent'),
@@ -43,7 +43,7 @@ const securityMiddleware = async (req, res, next) => {
         .status(403)
         .json({ error: 'Access denied', message: 'Bot detected' });
     }
-    if (decision.isDenied && decision.reason.isShield()) {
+    if (decision.isDenied() && decision.reason.isShield()) {
       logger.warn('Shield detected and blocked', {
         ip: req.ip,
         userAgent: req.get('User-Agent'),
@@ -54,7 +54,7 @@ const securityMiddleware = async (req, res, next) => {
         .status(403)
         .json({ error: 'Access denied', message: 'Shield detected' });
     }
-    if (decision.isDenied && decision.reason.isRateLimit()) {
+    if (decision.isDenied() && decision.reason.isRateLimit()) {
       logger.warn('Rate limit exceeded', {
         ip: req.ip,
         userAgent: req.get('User-Agent'),
