@@ -121,3 +121,4 @@
 {"level":"info","message":"::1 - - [07/Jul/2026:23:06:49 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 112 \"-\" \"HTTPie\"","service":"acquisition_api"}
 {"level":"info","message":"User signed out successfully","service":"acquisition_api"}
 {"level":"info","message":"::1 - - [07/Jul/2026:23:07:22 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::1 - - [14/Jul/2026:22:36:58 +0000] \"POST /health HTTP/1.1\" 404 146 \"-\" \"HTTPie\"","service":"acquisition_api"}
