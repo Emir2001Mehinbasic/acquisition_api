@@ -1,0 +1,27 @@
+services:
+  neon-local:
+    image: neondatabase/neon_local:latest
+    container_name: neon-local
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env.development
+    volumes:
+      - ./.neon_local:/tmp/.neon_local
+
+  app:
+    build:
+      context: .
+      target: development
+    container_name: acquisition-api-dev
+    command: npm run dev
+    depends_on:
+      - neon-local
+    env_file:
+      - .env.development
+    
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
