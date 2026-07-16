@@ -19,17 +19,17 @@ const securityMiddleware = async (req, res, next) => {
         message = 'User access limit reached';
         break;
       case 'guest':
-        limit = 5;
-        message = 'Access limit reached';
+        limit = 60;
+        message = 'Access limit reached'; // eslint-disable-line no-unused-vars
         break;
     }
-      const client = aj.withRule(
-        slidingWindow({
+    const client = aj.withRule(
+      slidingWindow({
         mode: 'LIVE',
         interval: 60,
         max: limit,
-  })
-);
+      })
+    );
 
     const decision = await client.protect(req);
 

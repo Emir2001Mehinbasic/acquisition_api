@@ -543,3 +543,26 @@
 {"level":"info","message":"::ffff:172.20.0.1 - - [15/Jul/2026:14:16:23 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"HTTPie\"","service":"acquisition_api"}
 {"level":"info","message":"::ffff:172.20.0.1 - - [15/Jul/2026:14:18:56 +0000] \"GET /api/auth/sign-up HTTP/1.1\" 404 155 \"-\" \"HTTPie\"","service":"acquisition_api"}
 {"level":"info","message":"User created: meho@gmail.com","service":"acquisition_api"}
+{"level":"info","message":"User with email : meho@gmail.com signed up successfully","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [15/Jul/2026:14:20:22 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 110 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:01:03 +0000] \"GET / HTTP/1.1\" - - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:01:03 +0000] \"GET / HTTP/1.1\" 200 6 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"ip":"::ffff:172.20.0.1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/api/users","service":"acquisition_api","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:01:30 +0000] \"GET /api/users HTTP/1.1\" 429 57 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"ip":"::ffff:172.20.0.1","level":"warn","message":"Rate limit exceeded","method":"POST","path":"/api/users","service":"acquisition_api","userAgent":"HTTPie"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:01:46 +0000] \"POST /api/users HTTP/1.1\" 429 57 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:03:56 +0000] \"POST /api/users HTTP/1.1\" 404 149 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:04:02 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:18:34 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching all users","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:18:38 +0000] \"GET /api/users HTTP/1.1\" 200 804 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:33:24 +0000] \"GET /api/users/2 HTTP/1.1\" 200 15 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:38:25 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:38:35 +0000] \"GET /api/users/2 HTTP/1.1\" 200 199 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:50:00 +0000] \"GET /api/users/2 HTTP/1.1\" 200 199 \"-\" \"HTTPie\"","service":"acquisition_api"}

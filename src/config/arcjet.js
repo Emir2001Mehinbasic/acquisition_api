@@ -1,5 +1,4 @@
-import arcjet, { shield, detectBot, slidingWindow} from '@arcjet/node';
-
+import arcjet, { shield, detectBot, slidingWindow } from '@arcjet/node';
 
 const aj = arcjet({
   // Get your site key from https://app.arcjet.com and set it as an environment
@@ -17,7 +16,7 @@ const aj = arcjet({
         // Uncomment to allow these other common bot categories
         // See the full list at https://arcjet.com/bot-list
         //"CATEGORY:MONITOR", // Uptime monitoring services
-        "CATEGORY:PREVIEW", // Link previews e.g. Slack, Discord
+        'CATEGORY:PREVIEW', // Link previews e.g. Slack, Discord
       ],
     }),
     // Create a token bucket rate limit. Other algorithms are supported.
@@ -26,8 +25,8 @@ const aj = arcjet({
       // Tracked by IP address by default, but this can be customized
       // See https://docs.arcjet.com/fingerprints
 
-      interval: 60, 
-      max: 5, 
+      interval: 10,
+      max: 60,
     }),
   ],
 });

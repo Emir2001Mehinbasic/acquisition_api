@@ -6,6 +6,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from './routes/auth.routes.js';
 import securityMiddleware from '#middleware/security.middleware.js';
+import userRoutes from './routes/users.routes.js';
 
 const app = express();
 
@@ -28,15 +29,14 @@ app.get('/', (req, res) => {
 
 app.get('/health', (req, res) => {
   logger.info('Health Check');
-  res
-    .status(200)
-    .json({
-      status: 'OK',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-    });
+  res.status(200).json({
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+  });
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
 
 export default app;
