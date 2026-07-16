@@ -566,3 +566,30 @@
 {"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:38:35 +0000] \"GET /api/users/2 HTTP/1.1\" 200 199 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
 {"level":"info","message":"Fetching user by id","service":"acquisition_api"}
 {"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:50:00 +0000] \"GET /api/users/2 HTTP/1.1\" 200 199 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:51:30 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:51:33 +0000] \"GET /api/users/2 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.126.0 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:51:53 +0000] \"GET /api/users/4 HTTP/1.1\" 200 196 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:51:56 +0000] \"GET /api/users/3 HTTP/1.1\" 200 195 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:51:58 +0000] \"GET /api/users/2 HTTP/1.1\" 200 199 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:51:59 +0000] \"GET /api/users/1 HTTP/1.1\" 200 194 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:52:03 +0000] \"GET /api/users/3 HTTP/1.1\" 200 195 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:52:05 +0000] \"GET /api/users/7 HTTP/1.1\" 404 28 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:52:07 +0000] \"GET /api/users/6 HTTP/1.1\" 404 28 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:21:52:08 +0000] \"GET /api/users/5 HTTP/1.1\" 200 190 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"Fetching user by id","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:04:52 +0000] \"GET /api/users/5 HTTP/1.1\" 200 190 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:17:42 +0000] \"GET /api/users/2 HTTP/1.1\" 401 60 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:22:06 +0000] \"POST /api/sign-in HTTP/1.1\" 404 151 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:22:18 +0000] \"POST /api/sign-in HTTP/1.1\" 404 151 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:23:23 +0000] \"POST /api/sign-up HTTP/1.1\" 404 151 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:24:41 +0000] \"POST /api/sign-up HTTP/1.1\" 404 151 \"-\" \"HTTPie\"","service":"acquisition_api"}

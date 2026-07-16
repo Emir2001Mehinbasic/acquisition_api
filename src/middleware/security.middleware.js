@@ -1,9 +1,25 @@
 import aj from '#config/arcjet.js';
 import logger from '#config/logger.js';
 import { slidingWindow } from '@arcjet/node';
+import { cookies } from '#utils/cookies.js';
+import { jwttoken } from '#utils/jwt.js';
 
 const securityMiddleware = async (req, res, next) => {
   try {
+    const token = cookies.get(req, 'token');
+
+    if (token && !req.user) {
+      try {
+        const decoded = jwttoken.verify(token);
+        req.user = {
+          id: decoded.id,
+          role: decoded.role,
+        };
+      } catch (e) {
+        logger.warn(`Ignoring invalid auth token in security middleware: ${e.message}`);
+      }
+    }
+
     const role = req.user?.role || 'guest';
 
     let limit;

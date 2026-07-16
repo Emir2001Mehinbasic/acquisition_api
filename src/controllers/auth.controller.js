@@ -19,7 +19,6 @@ export const signUp = async (req, res, next) => {
 
     const token = jwttoken.sign({
       id: user.id,
-      email: user.email,
       role: user.role,
     });
 
@@ -63,7 +62,6 @@ export const signIn = async (req, res, next) => {
 
     const token = jwttoken.sign({
       id: user.id,
-      email: user.email,
       role: user.role,
     });
 
