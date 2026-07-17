@@ -22,9 +22,9 @@ app.use(securityMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   logger.info('Hello From acqusition');
-  res.status(200).send('Aaaaaa');
+  res.status(200).send('Hello From acqusition');
 });
 
 app.get('/health', (req, res) => {
@@ -38,5 +38,9 @@ app.get('/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+
+app.use((req,res) => {
+  res.status(404).json({message:'Route not found'});
+});
 
 export default app;

@@ -613,3 +613,22 @@
 {"level":"info","message":"Fetching user by id","service":"acquisition_api"}
 {"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:34:16 +0000] \"GET /api/users/6 HTTP/1.1\" 200 190 \"-\" \"HTTPie\"","service":"acquisition_api"}
 {"level":"info","message":"Deleting user","service":"acquisition_api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [16/Jul/2026:22:35:26 +0000] \"DELETE /api/users/6 HTTP/1.1\" 200 190 \"-\" \"HTTPie\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:04:28 +0000] \"GET /health HTTP/1.1\" 500 91 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:04:28 +0000] \"GET /api HTTP/1.1\" 500 91 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:04:28 +0000] \"GET /nonexistent HTTP/1.1\" 500 91 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"Health Check","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:07:05 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:07:05 +0000] \"GET /api HTTP/1.1\" 200 21 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:07:05 +0000] \"GET /nonexistent HTTP/1.1\" 404 29 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"Health Check","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:09:24 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:09:24 +0000] \"GET /api HTTP/1.1\" 200 21 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:09:24 +0000] \"GET /nonexistent HTTP/1.1\" 404 29 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"Health Check","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:10:39 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"Hello From acqusition","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:10:39 +0000] \"GET /api HTTP/1.1\" 200 21 \"-\" \"-\"","service":"acquisition_api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [17/Jul/2026:22:10:39 +0000] \"GET /nonexistent HTTP/1.1\" 404 29 \"-\" \"-\"","service":"acquisition_api"}
