@@ -1,0 +1,70 @@
+name: Lint and Format
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    branches:
+      - main
+      - staging
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-format:
+    name: Lint and Format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        id: lint
+        continue-on-error: true
+        run: npm run lint -- --format github
+
+      - name: Run Prettier check
+        id: format
+        continue-on-error: true
+        run: npm run format:check
+
+      - name: Summarize lint and format results
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Lint and Format"
+            echo ""
+            if [ "${{ steps.lint.outcome }}" = "success" ]; then
+              echo "- ESLint: passed"
+            else
+              echo "- ESLint: failed"
+              echo "  - Suggested fix: \`npm run lint:fix\`"
+              echo "::error title=ESLint failed::Run npm run lint:fix to apply automatic fixes and review any remaining lint issues."
+            fi
+
+            if [ "${{ steps.format.outcome }}" = "success" ]; then
+              echo "- Prettier: passed"
+            else
+              echo "- Prettier: failed"
+              echo "  - Suggested fix: \`npm run format\`"
+              echo "::error title=Prettier check failed::Run npm run format to reformat files that do not match the project style."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail job on lint or format issues
+        if: steps.lint.outcome != 'success' || steps.format.outcome != 'success'
+        run: exit 1

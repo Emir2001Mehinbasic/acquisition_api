@@ -1,0 +1,101 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    branches:
+      - main
+      - staging
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test suite
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: test
+      NODE_OPTIONS: --experimental-vm-modules
+      DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/acquisition_api_test
+      CI: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        id: tests
+        continue-on-error: true
+        run: npm test -- --json --outputFile=coverage/jest-results.json
+
+      - name: Summarize test results
+        if: always()
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+          const resultsPath = 'coverage/jest-results.json';
+          const lines = ['## Test Results', ''];
+
+          if (fs.existsSync(resultsPath)) {
+            const results = JSON.parse(fs.readFileSync(resultsPath, 'utf8'));
+
+            lines.push(`- Status: ${results.success ? 'passed' : 'failed'}`);
+            lines.push(`- Test suites: ${results.numPassedTestSuites}/${results.numTotalTestSuites} passed`);
+            lines.push(`- Tests: ${results.numPassedTests}/${results.numTotalTests} passed`);
+            lines.push(`- Coverage reports: available in \`coverage/\``);
+
+            if (!results.success) {
+              for (const suite of results.testResults ?? []) {
+                const suiteName = suite.name || 'unknown-test-file';
+
+                for (const assertion of suite.assertionResults ?? []) {
+                  if (assertion.status === 'failed') {
+                    const failureMessage = (assertion.failureMessages ?? []).join('\n').replace(/\r?\n/g, '%0A');
+                    const title = assertion.fullName || assertion.title || 'Test failure';
+                    console.log(`::error file=${suiteName}::${title}%0A${failureMessage}`);
+                  }
+                }
+
+                if (suite.failureMessage) {
+                  const failureMessage = suite.failureMessage.replace(/\r?\n/g, '%0A');
+                  console.log(`::error file=${suiteName}::${failureMessage}`);
+                }
+              }
+            }
+          } else {
+            lines.push('- Status: unavailable');
+            lines.push('- Coverage reports: not generated');
+            console.log('::error title=Test results missing::Jest results were not generated.');
+          }
+
+          fs.appendFileSync(summaryPath, `${lines.join('\n')}\n`);
+          NODE
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+          retention-days: 30
+
+      - name: Fail job on test failures
+        if: steps.tests.outcome != 'success'
+        run: exit 1
